@@ -1,0 +1,37 @@
+<%= form_with model: @user, url: user_registration_path, class: 'registration-main', method: :post, local: true do |f| %>
+
+<div class='form-wrap'>
+  <div class='form-header'>
+    <h1 class='form-header-text'>
+      中国語文法・語法<br>ログイン情報
+    </h1>
+  </div>
+  
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ニックネーム</label>
+      <span>必須</span>
+    </div>
+    <%= f.text_area :nickname, class:"input-default", id:"nickname", autofocus: true%>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">メールアドレス</label>
+      <span>必須</span>
+    </div>
+    <%= f.email_field :email, class:"input-default", id:"email", autofocus: true %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">パスワード</label>
+      <span>必須</span>
+    </div>
+    <%= f.password_field :password, class:"input-default", id:"password"%>
+    <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
+  </div>
+  
+  <div class='register-btn'>
+    <%= f.submit "会員登録" ,class:"register-red-btn" %>
+  </div>
+</div>
+<% end %>
