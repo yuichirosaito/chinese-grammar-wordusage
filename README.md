@@ -1,24 +1,30 @@
-# README
+## users テーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column            | Type   | Options                  |
+| --------          | ------ | -----------              |
+| email             | string | null: false, unique: true|
+| encrypted_password| string | null: false              |
+| nickname          | string | null: false              |      
 
-Things you may want to cover:
+### Association
 
-* Ruby version
+- has_many :scores
+- has_many :posts
 
-* System dependencies
+## scores テーブル
 
-* Configuration
+| Column          | Type    | Options     |
+| --------        | ------  | ----------- |
+| score           | integer | null: false |
+| user            |reference| null: false, foreign_key: true|
 
-* Database creation
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- belongs_to :user
 
-* Services (job queues, cache servers, search engines, etc.)
+## posts テーブル
 
-* Deployment instructions
-
-* ...
+| Column         | Type    | Options     |
+| --------       | ------  | ----------- |
+| post           | text    | null: false |
