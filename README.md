@@ -10,11 +10,11 @@
 
 # テスト用アカウント: メールアドレス→l.0821.enjoy@icloud.com、パスワード→a19940821
 
-# URL
+# URL: https://chinese-grammer-wordusage.herokuapp.com
 
-# GIFと説明
+# GIFと説明: 
 
-# データベース設計	
+# ER図:	
 
 # table
 ## users テーブル
