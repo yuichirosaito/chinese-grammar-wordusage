@@ -10,13 +10,8 @@
 
 # テスト用アカウント: メールアドレス→l.0821.enjoy@icloud.com、パスワード→a19940821
 
-# URL
+# URL: https://chinese-grammer-wordusage.herokuapp.com
 
-<<<<<<< Updated upstream
-# GIFと説明
-
-# データベース設計	
-=======
 # GIFと説明: 
 ## トップページ: パパラックスを活用しシンプルさと全体の見やすさを意識した。　GIF: https://gyazo.com/ef4f28f6cff5e5dde53cec78282c4773
 
@@ -29,7 +24,6 @@
 ## ユーザー登録・ログイン画面: 入力情報を最小限に止めることでユーザー登録やログインの際に煩わしさを感じさせないよう実装した。　GIF: https://gyazo.com/8d1a568b943ffe421da2ad2606f45331
 
 # ER図:	https://drive.google.com/file/d/1ajsrR-1LmyJcqn4ISB78bUP3fnCDW5rQ/view?usp=sharing
->>>>>>> Stashed changes
 
 # table
 ## users テーブル

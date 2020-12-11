@@ -1,0 +1,11 @@
+<div class="ranking-page">
+<div class="ranking-wrap">
+
+ <h1 class="ranking-title"><%= current_user.nickname%>さんのランキング</h1>
+
+<% @scores.each.with_index(1) do |score, i| %>
+
+<div><span class="show-ranking">第<%= i %>位  <%= score.score %>点  <br><%= l score.created_at, format: :short%></span></div>
+<% end %>
+</div>
+</div>

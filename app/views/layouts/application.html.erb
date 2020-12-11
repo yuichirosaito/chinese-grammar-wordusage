@@ -4,12 +4,14 @@
     <title>ChineseGrammerWordusage</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script type="text/javascript", src="question.js"></script>
+    <script type="text/javascript", src="memo.js", charset="uft-8"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= yield %>
+     
   </body>
 </html>
