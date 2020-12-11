@@ -4,15 +4,15 @@
     }
 
    .ranking-page{
-    width:100vw;
     background-image: url(<%= asset_path('design11.png') %>);
     background-size: cover !important; 
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
-    padding-bottom: calc(100%*950/1950);
+    padding-bottom: calc(100%*1365/2048);
     background-size: 100% auto;
     opacity: 0.8;
+    background-color: black;
   }
 
   .ranking-title {
@@ -23,16 +23,8 @@
   text-align: center;
   background: linear-gradient(#18acb1, #2a17bb);
   opacity: 0.85;
-  cursor: pointer;
-  transition: all 1.0s ease 0s;
   display: block;
   margin-left: 400px;
-  }
-
-  .ranking-title:hover {
-    background: linear-gradient(#c1faa4, #58ee6c);
-    color: black;
-    padding: 40px;
   }
 
   .show-ranking{
@@ -44,7 +36,7 @@
   background: linear-gradient(#dcf4f5, #b2a9f8);
   margin-left: 500px;
   opacity: 0.85;
-  cursor: pointer;
+
   transition: all 0.3s ease 0s;
   display: block;
   margin-top: 20px;
@@ -59,12 +51,27 @@
     padding: 30px;
   }
 
+  .average{
+  border-radius: 70px;
+  width: 200px;
+  line-height: 35px;
+  color: green;
+  font-size: 20px;
+  opacity: 0.85;
+  position:absolute;
+  top: 0px;
+  text-align: center;
+  margin-left: 750px;
+  margin-top: 10px;
+
+  }
+
   
 
-  /*body {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+/*.ranking-page{
+  background: linear-gradient(-45deg, #fffcfb, #1d0e14, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 5s ease infinite;
 }
 
 @keyframes gradient {
@@ -77,4 +84,4 @@
   100% {
     background-position: 0% 50%;
   }
-}*/
+}
