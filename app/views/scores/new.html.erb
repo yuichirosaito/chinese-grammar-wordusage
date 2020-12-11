@@ -1,0 +1,26 @@
+<div class="all">
+
+<div id="sceneTop" class="top screen">
+      <h1>中国語中級文法・語法問題</h1>
+      <button class="btnstart"id="btnStart">回答開始</button>
+    </div>
+
+    <div id="sceneGame" class="game screen">
+      <h1 class="title">最も適切な選択肢をクリックしてください</h1>
+      <p class= "text", id="textQuestion"></p>
+      <ul id="listAnswer"></ul>
+    </div>
+
+    <div id="sceneResult" class="result screen">
+       <div class="reset" id="btnReset">もう一度</div>
+
+       <%= current_user.nickname%>さんの<p>得点は<span id="showScore"></span>点です。</p>
+       <%= form_with model: @score, class: 'new-score-form', local: true do |form| %>
+       <%= form.number_field :score, value: "", url: scores_path, id: "score", class:"score"%>
+       <%= form.submit "ランキングに反映する" , id: "score-submit" ,class:"ranking" %>
+       <% end %>
+    </div>
+    
+
+</div> 
+
