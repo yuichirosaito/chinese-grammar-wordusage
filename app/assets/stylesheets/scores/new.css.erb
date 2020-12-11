@@ -1,0 +1,135 @@
+.all{
+    width: 100vw;
+    min-width: 800px;
+    height: 100vh;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    background-image: url(<%= asset_path('design4.png') %>);
+    background-size: cover;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+div.is-hidden {
+  display: none;
+}
+
+div.is-visible {
+  display: block;
+}
+
+.game {
+  display: none;
+  position: absolute;
+  top: 100px;
+  font-size: 20px;
+}
+
+.title{
+  margin-bottom: 50px;
+  font-size: 20px;
+  margin-right: 20px;
+  font-size: 40px;
+}
+
+.text{
+  font-size: 40px;
+}
+
+.result {
+  display: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+}
+
+.screen {
+  width: 60%;
+  margin: 32px auto;
+  text-align: center;
+  font-size: 30px;
+}
+
+.screen button {
+  display: inline-block;
+}
+
+#listAnswer {
+  margin-top: 24px;
+}
+
+.questionChoice {
+  margin-top: 12px;
+  border-radius: 20px;
+  background: linear-gradient(#d8dff7, #7964f3);
+}
+
+.reset{
+  text-align: center;
+  border-radius: 20px;
+  background-color: #ea352d;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 0px 230px;
+  padding: 2vh 2vw;
+  margin-top: 20px;
+}
+
+.btnstart{
+  border-radius: 20px;
+    width: 15vw;
+    min-width: 200px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding: 50px;
+    font-size: 20px;
+    background: linear-gradient(#97cee4, #6bc4ee);
+    opacity: 0.77;
+    text-align: center;
+    
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.btnstart:hover {
+  background: linear-gradient(#cdfab7, #73fa85);
+  color: black;
+  padding: 55px;
+}
+.questionChoice:hover {
+  cursor: pointer;
+}
+
+.new-score-form{
+  position: absolute;
+}
+
+.score{
+  display: none;
+}
+
+.ranking{
+    text-align: center;
+    border-radius: 20px;
+    background-color: #ea352d;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFF;
+    margin: 0px 230px;
+    padding: 2vh 2vw;
+    margin-top: 20px;
+    margin-left: 295px;
+  }
