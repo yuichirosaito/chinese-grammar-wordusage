@@ -9,4 +9,9 @@ Rails.application.routes.draw do
       get 'myscore'
     end
   end  
+  resources :posts do
+    collection do
+      get 'search'
+    end
+  end
 end
