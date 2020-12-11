@@ -1,0 +1,90 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  }
+
+body,html,main
+{
+  height: 100%;
+}
+
+.fixed-bg {
+  height: 100%;
+  background-size: cover !important; 
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;   
+}
+
+.main-text0 {
+  font-size: 50px;
+  background: linear-gradient(#dcf4f5, #b2a9f8);
+  border-radius: 50px;
+  text-align: center;
+  color: white;
+  text-shadow: white;
+  opacity: 0.7;
+  margin-bottom: 50px;
+}
+
+.main-text1 {
+  font-size: 50px;
+  background: linear-gradient(#dcf4f5, #b2a9f8);
+  border-radius: 50px;
+  text-align: center;
+  color: grey;
+  text-shadow: grey;
+  margin-bottom: 50px;
+}
+
+.main-text2 {
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50px;
+  color: white;
+  text-shadow: black;
+  opacity: 0.7;
+  margin-top: 300px;
+}
+
+.text-box1 {
+  background: linear-gradient(#dcf4f5, #b2a9f8);
+  padding: 20px;
+  width: 380px;
+  font-size: 30px;
+  border-radius: 30px;
+  opacity: 0.6;
+}
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-1 {
+  background-image: url(<%= asset_path('design12.png') %>);
+}
+.bg-2 {
+  background-image: url(<%= asset_path('design2.png') %>);
+}
+.bg-3 {
+  background-image: url(<%= asset_path('design13.png') %>);
+}
