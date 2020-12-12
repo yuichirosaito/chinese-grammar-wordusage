@@ -9,6 +9,29 @@ window.addEventListener('load', function(){
   const showScore = document.getElementById("showScore");
   const btnStart = document.getElementById("btnStart");
   const btnReset = document.getElementById("btnReset");
+  const sceneCommentary = document.getElementById("sceneCommentary");
+  const btnCommentary = document.getElementById("btnCommentary");
+  const explainedQuestion0 = document.getElementById("explainedQuestion0");
+  const explainedQuestion1 = document.getElementById("explainedQuestion1");
+  const explainedQuestion2 = document.getElementById("explainedQuestion2");
+  const explainedQuestion3 = document.getElementById("explainedQuestion3");
+  const explainedQuestion4 = document.getElementById("explainedQuestion4");
+  const explainedQuestion5 = document.getElementById("explainedQuestion5");
+  const explainedQuestion6 = document.getElementById("explainedQuestion6");
+  const explainedQuestion7 = document.getElementById("explainedQuestion7");
+  const explainedQuestion8 = document.getElementById("explainedQuestion8");
+  const explainedQuestion9 = document.getElementById("explainedQuestion9");
+  const explainedQuestion01 = document.getElementById("explainedQuestion01");
+  const explainedQuestion02 = document.getElementById("explainedQuestion02");
+  const explainedQuestion03 = document.getElementById("explainedQuestion03");
+  const explainedQuestion04 = document.getElementById("explainedQuestion04");
+  const explainedQuestion05 = document.getElementById("explainedQuestion05");
+  const explainedQuestion06 = document.getElementById("explainedQuestion06");
+  const explainedQuestion07 = document.getElementById("explainedQuestion07");
+  const explainedQuestion08 = document.getElementById("explainedQuestion08");
+  const explainedQuestion09 = document.getElementById("explainedQuestion09");
+  const explainedQuestion10 = document.getElementById("explainedQuestion10");
+
   
   const question = [
 
@@ -16,60 +39,70 @@ window.addEventListener('load', function(){
     {
       text: "请给我两（   ）纸。",
       choice: ["件", "把", "张", "个"],
-      answer: "张"
+      answer: "张",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "我家（   ）学校很近。",
       choice: ["从", "离", "和", "跟"],
-      answer: "离"
+      answer: "离",
+      explain: "「〜から」が物理的な距離を意味する時は「离」を使う"
     },
     {
       text: "我是在大学学（   ）汉语。",
       choice: ["了","着","的","过",
       ],
-      answer: "的"
+      answer: "的",
+      explain: "経験を表す時は「过」"
     },
     {
       text: "明天我（   ）你打电话。",
       choice: ["向","往","对","给",
       ],
-      answer: "把"
+      answer: "把",
+      explain: "電話をかける時の前置詞は「给」"
     },
     {
       text: "这里（   ）抽烟吗？",
       choice: ["可能","想","可以","要",
       ],
-      answer: "可以"
+      answer: "可以",
+      explain: "許可を得る時は「可以」"
     },
     {
       text: "快放暑假（   ）。",
       choice: ["吗","呢","的","了",
       ],
-      answer: "了"
+      answer: "了",
+      explain: "もうすぐ〜だは「快-了」"
     },
     {
       text: "我（   ）去过法国。",
       choice: ["不是","没有","不","别",
       ],
-      answer: "没有"
+      answer: "没有",
+      explain: "「过」の否定は「没有」"
     },
     {
       text: "墙上挂（   ）一张照片。",
       choice: ["在","着","得","的",
       ],
-      answer: "着"
+      answer: "着",
+      explain: "状態の持続を表すのは「着」"
     },
     {
       text: "你（   ）来了？",
       choice: ["再","才","就","又",
       ],
-      answer: "又"
+      answer: "又",
+      explain: "動作の繰り返しを示す"
     },
     {
       text: "她（   ）没来？",
       choice: ["怎么","什么","怎么样","什么样",
       ],
-      answer: "怎么"
+      answer: "怎么",
+      explain: "どうしての反語"
     },
 
 //3級
@@ -77,121 +110,141 @@ window.addEventListener('load', function(){
     {
       text: "我一看见日本菜（   ）想吃。",
       choice: ["再", "就", "在", "又"],
-      answer: "就"
+      answer: "就",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "（   ）下星期三开始，我去食堂吃晚饭。？",
+      text: "（   ）下星期三开始，我去食堂吃晚饭。",
       choice: ["从", "在", "对", "离"],
-      answer: "从"
+      answer: "从",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "外面正下（   ）雨呢。",
       choice: ["了","过","着","得",
       ],
-      answer: "着"
+      answer: "着",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "请大家（   ）行李放在这边。",
       choice: ["被","把","要","叫",
       ],
-      answer: "把"
+      answer: "把",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "大家都是老朋友，你（   ）客气。",
       choice: ["应该","不会","不想","不用",
       ],
-      answer: "不用"
+      answer: "不用",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "刚上车的乘客，请（   ）里走。",
       choice: ["在","给","往","从",
       ],
-      answer: "往"
+      answer: "往",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "我每天早上都吃两（   ）面包，喝一杯咖啡。",
       choice: ["本","片","支","张",
       ],
-      answer: "片"
+      answer: "片",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "老师（   ）同学们每天用中文写一篇日记。",
       choice: ["使","对","被","让",
       ],
-      answer: "让"
+      answer: "让",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "我爷爷（   ）70 岁了，但是还在工作。",
       choice: ["虽然","应为","只要","不管",
       ],
-      answer: "虽然"
+      answer: "虽然",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "我快要去中国留学（   ）。",
       choice: ["着","到","了","过",
       ],
-      answer: "了"
+      answer: "了",
+      explain: "紙などを数える時は「张」を使う"
     },
     //2級
     {
       text: "你今天怎么这么没（   ），哪里不舒服吗？",
       choice: ["精明","精神","神气","元气",
       ],
-      answer: "精神"
+      answer: "精神",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "他跟公司（   ）了，要到下周三才能来上班。",
       choice: ["请假","放假","休假","病假",
       ],
-      answer: "请假"
+      answer: "请假",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "今天我请客，你别（   ），想吃什么就点什么吧。",
       choice: ["大气","小气","争气","客气",
       ],
-      answer: "客气"
+      answer: "客气",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "你们才认识几天，你真的（   ）她的为人吗？",
       choice: ["明知","见解","了解","知情",
       ],
-      answer: "了解"
+      answer: "了解",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "明天路上可能会堵车，你们最好（   ）出门。",
       choice: ["先前","提前","当前","从前",
       ],
-      answer: "提前"
+      answer: "提前",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "这件事，她嘴上是（   ）了，但一直没有实际行动。",
       choice: ["回答","答话","答应","报答",
       ],
-      answer: "答应"
+      answer: "答应",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "这家店的小吃，（   ）生煎包、馄饨、烧卖什么的，我觉得味道都不错。",
       choice: ["比如","假如","如果","如此",
       ],
-      answer: "比如"
+      answer: "比如",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "自从爷爷用（   ）了智能手机，每天都跟我视频聊天儿。",
       choice: ["来","到","下","上",
       ],
-      answer: "上"
+      answer: "上",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "他的爱好很（   ），唱歌、跳舞、画画儿、摄影等他样样都喜欢。",
       choice: ["广大","广泛","宽大","宽广",
       ],
-      answer: "广泛"
+      answer: "广泛",
+      explain: "紙などを数える時は「张」を使う"
     },
     {
       text: "（   ）你们都不告诉我，我（   ）知道事情的前因后果。",
       choice: ["即使...也...","无论...都...","虽然...但是...","不是...而是...",
       ],
-      answer: "即使...也..."
+      answer: "即使...也...",
+      explain: "紙などを数える時は「张」を使う"
     },
   ];
 
@@ -205,26 +258,20 @@ while (question.length > 0) {
   question.splice(k, 1);
 }
 
-  // ゲームで使用する共通の変数です
-  // answer...プレイヤーの答えと比較する、正解のテキストです
-  // gameCount...プレイヤーが答えた数です
-  // success...プレイヤーが答えて、正解した数です
   let state = {
     answer: "",
     gameCount: 0,
     success: 0
   };
 
-  // ゲームをリセットする関数を書いてみましょう
-  function init() {
-    state.gameCount = 0;
-    state.success = 0;
-    changeScene(sceneResult, sceneTop);
-
-    btnStart.addEventListener("click", gameStart, false);
+  // スタートボタンが押された時
+  function gameStart() {
+    changeScene(sceneTop, sceneGame);
+    showQuestion();
+    choiceQuestion();
   }
 
-  // 1.トップ画面 2.ゲーム画面 3.リザルト画面
+  // 1.トップ画面 2.ゲーム画面 3.リザルト画面 4.解説画面 
   function changeScene(hiddenScene, visibleScene) {
     hiddenScene.classList.add("is-hidden");
     hiddenScene.classList.remove("is-visible");
@@ -241,7 +288,6 @@ while (question.length > 0) {
     listAnswer.innerHTML = str;
   }
 
-
   function choiceQuestion() {
     let questionChoice = document.querySelectorAll(".questionChoice");
     questionChoice.forEach(function(choice) {
@@ -251,7 +297,6 @@ while (question.length > 0) {
           state.answer = this.textContent;
           checkAnswer(newQuestion[state.gameCount].answer);
         },
-        false
       );
     });
   }
@@ -281,22 +326,53 @@ while (question.length > 0) {
   function incorrectAnswer() {
   }
 
-  // スタートボタンが押された時
-  function gameStart() {
-    changeScene(sceneTop, sceneGame);
-    showQuestion();
-    choiceQuestion();
-  }
-
   // ゲームが終了した時
   function gameEnd() {
     changeScene(sceneGame, sceneResult);
     showScore.innerHTML = state.success;
+    btnCommentary.addEventListener("click", CommentaryBegin);
+  }
+
+  // 解説ボタンが押された時
+  function CommentaryBegin() {
+    
+    explainedQuestion0.innerHTML = newQuestion[0].text;
+    explainedQuestion01.innerHTML = newQuestion[0].explain;
+    explainedQuestion1.innerHTML = newQuestion[1].text;
+    explainedQuestion02.innerHTML = newQuestion[1].explain;
+    explainedQuestion2.innerHTML = newQuestion[2].text;
+    explainedQuestion03.innerHTML = newQuestion[2].explain;
+    explainedQuestion3.innerHTML = newQuestion[3].text;
+    explainedQuestion04.innerHTML = newQuestion[3].explain;
+    explainedQuestion4.innerHTML = newQuestion[4].text;
+    explainedQuestion05.innerHTML = newQuestion[4].explain;
+    explainedQuestion5.innerHTML = newQuestion[5].text;
+    explainedQuestion06.innerHTML = newQuestion[5].explain;
+    explainedQuestion6.innerHTML = newQuestion[6].text;
+    explainedQuestion07.innerHTML = newQuestion[6].explain;
+    explainedQuestion7.innerHTML = newQuestion[7].text;
+    explainedQuestion08.innerHTML = newQuestion[7].explain;
+    explainedQuestion8.innerHTML = newQuestion[8].text;
+    explainedQuestion09.innerHTML = newQuestion[8].explain;
+    explainedQuestion9.innerHTML = newQuestion[9].text;
+    explainedQuestion10.innerHTML = newQuestion[9].explain;
+
+    
+    changeScene(sceneResult, sceneCommentary);
     document.getElementById("score").setAttribute("value",state.success);
-    btnReset.addEventListener("click", init, false);
+    btnReset.addEventListener("click", init);
+  }
+
+
+  // ゲームをリセットする関数
+  function init() {
+    state.gameCount = 0;
+    state.success = 0;
+    changeScene(sceneCommentary, sceneTop);
+    btnStart.addEventListener("click", gameStart, false);
   }
 
   // スタートボタンが押されたら、ゲームスタートの関数を
-  // リセットボタンが押されたら、ゲーム終了後にゲームをリセットする関数を実行するイベントです
+  // リセットボタンが押されたら、ゲーム終了後にゲームをリセットする関数を実行するイベント
   init();
 })();
