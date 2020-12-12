@@ -1,0 +1,18 @@
+<div class="communication">
+
+<%= form_with(url:  search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, class: "search-input" %>
+  <%= form.submit "キーワードで検索する", class: "search-btn" %>
+<% end %>
+
+<% @posts.each do |post| %>
+  <div class="post" data-id = <%= post.id %>>
+    <div class="post-date">
+      投稿日時：<%= post.created_at %>
+    </div>
+    <div class="post-content">
+      <%= post.content %>
+    </div>
+  </div>
+<% end %>
+</div>

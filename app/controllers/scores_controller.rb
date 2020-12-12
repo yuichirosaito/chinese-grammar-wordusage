@@ -13,6 +13,14 @@ class ScoresController < ApplicationController
         end
     end    
 
+    def all
+        @scores = Score.all.order(score: "DESC").limit(30)
+    end
+
+    def myscore
+        @scores = current_user.scores.order(score: "DESC").limit(30)
+    end
+
     private
     
     def score_params

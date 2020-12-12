@@ -61,24 +61,6 @@ body,html,main
   opacity: 0.6;
 }
 
-body {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .bg-1 {
   background-image: url(<%= asset_path('design12.png') %>);
 }
@@ -103,6 +85,44 @@ body {
 }
   
 .favorite-btn1:hover {
+  background: linear-gradient(#c1faa4, #58ee6c);
+  color: black;
+  padding: 50px;
+}
+
+.favorite-btn2 {
+  display: inline;
+  border-radius: 30px;
+  color: black;
+  padding: 30px 10px;
+  font-size: 15px;
+  background: linear-gradient(#dcf4f5, #b2a9f8);
+  margin-left: 50px;
+  opacity: 0.85;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+
+.favorite-btn2:hover {
+  background: linear-gradient(#c1faa4, #58ee6c);
+  color: black;
+  padding: 50px;
+}
+
+.favorite-btn3 {
+  display: inline;
+  border-radius: 30px;
+  color: black;
+  padding: 30px 10px;
+  font-size: 15px;
+  background: linear-gradient(#dcf4f5, #b2a9f8);
+  margin-left: 50px;
+  opacity: 0.85;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+
+.favorite-btn3:hover {
   background: linear-gradient(#c1faa4, #58ee6c);
   color: black;
   padding: 50px;

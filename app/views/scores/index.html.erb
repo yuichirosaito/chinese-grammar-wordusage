@@ -11,6 +11,13 @@
 
 
   <div class="fixed-bg bg-3">
+  <div class="function-link">  
   <%= link_to '問題を解いてみる', new_score_path, method: :get, class: "favorite-btn1" %>
+  <%= link_to '他の学習者と交流する', posts_path, method: :get, class: "favorite-btn2" %>
+  <%= link_to '全体のランキングを見る', all_scores_path, method: :get, class: "favorite-btn3" %>
+  <%= link_to '自分のランキングを見る', myscore_scores_path, method: :get, class: "favorite-btn3" %>
+  
+  </div>
+  
   </div>
 </main>
