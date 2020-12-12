@@ -1,0 +1,45 @@
+<div class="ranking-page">
+ <div class="ranking-wrap">
+<div class="ranking-title">ランキング</div>
+<% @scores.each.with_index(1) do |score, i| %>
+
+<% arrays = [] %> 
+
+<% Score.count.times do |i|%>
+<% i += 1 %>
+<% array = {} %>
+<% while Score.find_by(id: i) == nil %>
+<% i += 1 %>
+<% end %>
+<% column = Score.find(i) %>
+<% array = column.score %>
+<% arrays << array %>
+<% end %>
+
+<% avg = arrays.sum/arrays.length %>
+<% array2 = arrays.each do |x| %>
+<% (x - avg) ** 2 %>
+<% end %>
+<% std = Math.sqrt(array2.sum / arrays.length).round(1) %>
+<% dev = ((score.score - avg) * 10 / std + 50).round(1) %>
+
+<div><span class="show-ranking">第<%= i %>位  <%= score.user.nickname %><br><%= score.score %>点  偏差値: <%= dev %></span></div>
+<% end %>
+
+<% arrays = [] %> 
+
+<% Score.count.times do |i|%>
+<% i += 1 %>
+<% array = {} %>
+<% while Score.find_by(id: i) == nil %>
+<% i += 1 %>
+<% end %>
+<% column = Score.find(i) %>
+<% array = column.score %>
+<% arrays << array %>
+<% end %>
+
+<% avg = arrays.sum/arrays.length %>
+<span class="average">(平均<%= avg %>点)</span>
+</div>
+</div>
