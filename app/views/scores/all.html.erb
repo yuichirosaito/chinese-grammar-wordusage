@@ -1,6 +1,7 @@
 <div class="ranking-page">
  <div class="ranking-wrap">
-<div class="ranking-title">ランキング</div>　
+<div class="ranking-title">ランキング</div>
+
 <% @scores.each.with_index(1) do |score, i| %>
 
 <% arrays = [] %> 
@@ -41,5 +42,6 @@
 
 <% avg = arrays.sum/arrays.length %>
 <span class="average">(平均<%= avg %>点)</span>
-</div>　
+
+</div>
 </div>
