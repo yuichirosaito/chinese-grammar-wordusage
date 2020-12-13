@@ -11,94 +11,76 @@ window.addEventListener('load', function(){
   const btnReset = document.getElementById("btnReset");
   const sceneCommentary = document.getElementById("sceneCommentary");
   const btnCommentary = document.getElementById("btnCommentary");
-  const explainedQuestion0 = document.getElementById("explainedQuestion0");
-  const explainedQuestion1 = document.getElementById("explainedQuestion1");
-  const explainedQuestion2 = document.getElementById("explainedQuestion2");
-  const explainedQuestion3 = document.getElementById("explainedQuestion3");
-  const explainedQuestion4 = document.getElementById("explainedQuestion4");
-  const explainedQuestion5 = document.getElementById("explainedQuestion5");
-  const explainedQuestion6 = document.getElementById("explainedQuestion6");
-  const explainedQuestion7 = document.getElementById("explainedQuestion7");
-  const explainedQuestion8 = document.getElementById("explainedQuestion8");
-  const explainedQuestion9 = document.getElementById("explainedQuestion9");
-  const explainedQuestion01 = document.getElementById("explainedQuestion01");
-  const explainedQuestion02 = document.getElementById("explainedQuestion02");
-  const explainedQuestion03 = document.getElementById("explainedQuestion03");
-  const explainedQuestion04 = document.getElementById("explainedQuestion04");
-  const explainedQuestion05 = document.getElementById("explainedQuestion05");
-  const explainedQuestion06 = document.getElementById("explainedQuestion06");
-  const explainedQuestion07 = document.getElementById("explainedQuestion07");
-  const explainedQuestion08 = document.getElementById("explainedQuestion08");
-  const explainedQuestion09 = document.getElementById("explainedQuestion09");
-  const explainedQuestion10 = document.getElementById("explainedQuestion10");
+  const explainedQuestion = document.getElementById("explainedQuestion");
+  const textQuestion2 = document.getElementById("textQuestion2");
 
   
   const question = [
 
     //4級
     {
-      text: "请给我两（   ）纸。",
+      text: "请给我两（???）纸。",
       choice: ["件", "把", "张", "个"],
       answer: "张",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "我家（   ）学校很近。",
+      text: "我家（???）学校很近。",
       choice: ["从", "离", "和", "跟"],
       answer: "离",
       explain: "「〜から」が物理的な距離を意味する時は「离」を使う"
     },
     {
-      text: "我是在大学学（   ）汉语。",
+      text: "我是在大学学（???）汉语。",
       choice: ["了","着","的","过",
       ],
       answer: "的",
       explain: "経験を表す時は「过」"
     },
     {
-      text: "明天我（   ）你打电话。",
+      text: "明天我（???）你打电话。",
       choice: ["向","往","对","给",
       ],
       answer: "把",
       explain: "電話をかける時の前置詞は「给」"
     },
     {
-      text: "这里（   ）抽烟吗？",
+      text: "这里（???）抽烟吗？",
       choice: ["可能","想","可以","要",
       ],
       answer: "可以",
       explain: "許可を得る時は「可以」"
     },
     {
-      text: "快放暑假（   ）。",
+      text: "快放暑假（???）。",
       choice: ["吗","呢","的","了",
       ],
       answer: "了",
       explain: "もうすぐ〜だは「快-了」"
     },
     {
-      text: "我（   ）去过法国。",
+      text: "我（???）去过法国。",
       choice: ["不是","没有","不","别",
       ],
       answer: "没有",
       explain: "「过」の否定は「没有」"
     },
     {
-      text: "墙上挂（   ）一张照片。",
+      text: "墙上挂（???）一张照片。",
       choice: ["在","着","得","的",
       ],
       answer: "着",
       explain: "状態の持続を表すのは「着」"
     },
     {
-      text: "你（   ）来了？",
+      text: "你（???）来了？",
       choice: ["再","才","就","又",
       ],
       answer: "又",
       explain: "動作の繰り返しを示す"
     },
     {
-      text: "她（   ）没来？",
+      text: "她（???）没来？",
       choice: ["怎么","什么","怎么样","什么样",
       ],
       answer: "怎么",
@@ -108,68 +90,68 @@ window.addEventListener('load', function(){
 //3級
 
     {
-      text: "我一看见日本菜（   ）想吃。",
+      text: "我一看见日本菜（???）想吃。",
       choice: ["再", "就", "在", "又"],
       answer: "就",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "（   ）下星期三开始，我去食堂吃晚饭。",
+      text: "（???）下星期三开始，我去食堂吃晚饭。",
       choice: ["从", "在", "对", "离"],
       answer: "从",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "外面正下（   ）雨呢。",
+      text: "外面正下（???）雨呢。",
       choice: ["了","过","着","得",
       ],
       answer: "着",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "请大家（   ）行李放在这边。",
+      text: "请大家（???）行李放在这边。",
       choice: ["被","把","要","叫",
       ],
       answer: "把",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "大家都是老朋友，你（   ）客气。",
+      text: "大家都是老朋友，你（???）客气。",
       choice: ["应该","不会","不想","不用",
       ],
       answer: "不用",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "刚上车的乘客，请（   ）里走。",
+      text: "刚上车的乘客，请（???）里走。",
       choice: ["在","给","往","从",
       ],
       answer: "往",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "我每天早上都吃两（   ）面包，喝一杯咖啡。",
+      text: "我每天早上都吃两（???）面包，喝一杯咖啡。",
       choice: ["本","片","支","张",
       ],
       answer: "片",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "老师（   ）同学们每天用中文写一篇日记。",
+      text: "老师（???）同学们每天用中文写一篇日记。",
       choice: ["使","对","被","让",
       ],
       answer: "让",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "我爷爷（   ）70 岁了，但是还在工作。",
+      text: "我爷爷（???）70 岁了，但是还在工作。",
       choice: ["虽然","应为","只要","不管",
       ],
       answer: "虽然",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "我快要去中国留学（   ）。",
+      text: "我快要去中国留学（???）。",
       choice: ["着","到","了","过",
       ],
       answer: "了",
@@ -177,70 +159,70 @@ window.addEventListener('load', function(){
     },
     //2級
     {
-      text: "你今天怎么这么没（   ），哪里不舒服吗？",
+      text: "你今天怎么这么没（???），哪里不舒服吗？",
       choice: ["精明","精神","神气","元气",
       ],
       answer: "精神",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "他跟公司（   ）了，要到下周三才能来上班。",
+      text: "他跟公司（???）了，要到下周三才能来上班。",
       choice: ["请假","放假","休假","病假",
       ],
       answer: "请假",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "今天我请客，你别（   ），想吃什么就点什么吧。",
+      text: "今天我请客，你别（???），想吃什么就点什么吧。",
       choice: ["大气","小气","争气","客气",
       ],
       answer: "客气",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "你们才认识几天，你真的（   ）她的为人吗？",
+      text: "你们才认识几天，你真的（???）她的为人吗？",
       choice: ["明知","见解","了解","知情",
       ],
       answer: "了解",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "明天路上可能会堵车，你们最好（   ）出门。",
+      text: "明天路上可能会堵车，你们最好（???）出门。",
       choice: ["先前","提前","当前","从前",
       ],
       answer: "提前",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "这件事，她嘴上是（   ）了，但一直没有实际行动。",
+      text: "这件事，她嘴上是（???）了，但一直没有实际行动。",
       choice: ["回答","答话","答应","报答",
       ],
       answer: "答应",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "这家店的小吃，（   ）生煎包、馄饨、烧卖什么的，我觉得味道都不错。",
+      text: "这家店的小吃，（???）生煎包、馄饨、烧卖什么的，我觉得味道都不错。",
       choice: ["比如","假如","如果","如此",
       ],
       answer: "比如",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "自从爷爷用（   ）了智能手机，每天都跟我视频聊天儿。",
+      text: "自从爷爷用（???）了智能手机，每天都跟我视频聊天儿。",
       choice: ["来","到","下","上",
       ],
       answer: "上",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "他的爱好很（   ），唱歌、跳舞、画画儿、摄影等他样样都喜欢。",
+      text: "他的爱好很（???），唱歌、跳舞、画画儿、摄影等他样样都喜欢。",
       choice: ["广大","广泛","宽大","宽广",
       ],
       answer: "广泛",
       explain: "紙などを数える時は「张」を使う"
     },
     {
-      text: "（   ）你们都不告诉我，我（   ）知道事情的前因后果。",
+      text: "（???）你们都不告诉我，我（???）知道事情的前因后果。",
       choice: ["即使...也...","无论...都...","虽然...但是...","不是...而是...",
       ],
       answer: "即使...也...",
@@ -248,15 +230,16 @@ window.addEventListener('load', function(){
     },
   ];
 
-  newQuestion = [];
+     newQuestion = [];
+     wrongQuestion = [];
 
-while (question.length > 0) {
+     while (question.length > 0) {
   n = question.length;
   k = Math.floor(Math.random() * n);
 
   newQuestion.push(question[k]);
   question.splice(k, 1);
-}
+     }
 
   let state = {
     answer: "",
@@ -302,12 +285,14 @@ while (question.length > 0) {
   }
 
   // 解答が正解か不正解かをチェック
+  
   function checkAnswer(answer) {
     if (answer === state.answer) {
       correctAnswer();
     } else {
       incorrectAnswer();
     }
+
     state.gameCount++;
     if (state.gameCount < 10) {
       showQuestion();
@@ -324,6 +309,7 @@ while (question.length > 0) {
 
   // 上でチェックし、不正解だった場合
   function incorrectAnswer() {
+    wrongQuestion.push(newQuestion[state.gameCount]);
   }
 
   // ゲームが終了した時
@@ -335,28 +321,14 @@ while (question.length > 0) {
 
   // 解説ボタンが押された時
   function CommentaryBegin() {
-    
-    explainedQuestion0.innerHTML = newQuestion[0].text;
-    explainedQuestion01.innerHTML = newQuestion[0].explain;
-    explainedQuestion1.innerHTML = newQuestion[1].text;
-    explainedQuestion02.innerHTML = newQuestion[1].explain;
-    explainedQuestion2.innerHTML = newQuestion[2].text;
-    explainedQuestion03.innerHTML = newQuestion[2].explain;
-    explainedQuestion3.innerHTML = newQuestion[3].text;
-    explainedQuestion04.innerHTML = newQuestion[3].explain;
-    explainedQuestion4.innerHTML = newQuestion[4].text;
-    explainedQuestion05.innerHTML = newQuestion[4].explain;
-    explainedQuestion5.innerHTML = newQuestion[5].text;
-    explainedQuestion06.innerHTML = newQuestion[5].explain;
-    explainedQuestion6.innerHTML = newQuestion[6].text;
-    explainedQuestion07.innerHTML = newQuestion[6].explain;
-    explainedQuestion7.innerHTML = newQuestion[7].text;
-    explainedQuestion08.innerHTML = newQuestion[7].explain;
-    explainedQuestion8.innerHTML = newQuestion[8].text;
-    explainedQuestion09.innerHTML = newQuestion[8].explain;
-    explainedQuestion9.innerHTML = newQuestion[9].text;
-    explainedQuestion10.innerHTML = newQuestion[9].explain;
-
+    var str = "";
+    var text = "";
+   for (let i = 0; i < wrongQuestion.length; i++) {
+    str += '<li class="explained-message">' +  '(' + (i+1) + ')' + wrongQuestion[i].explain; + "</li>";
+    text += '<li class="explained-question">' +  '(' + (i+1) + ')' + wrongQuestion[i].text; + "</li>";
+    explainedQuestion.innerHTML = str;
+    textQuestion2.innerHTML = text;
+    }
     
     changeScene(sceneResult, sceneCommentary);
     document.getElementById("score").setAttribute("value",state.success);
