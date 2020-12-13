@@ -12,47 +12,22 @@
     </div>
 
     <div id="sceneResult" class="result screen">
-       <div class="checkscore"><%= current_user.nickname%>さんの<p>得点は<span id="showScore"></span>点です。</p> </div>
+       <div class="checkscore"><%= current_user.nickname%>さんの<p>得点は100点満点中<span id="showScore"></span>点です。</p> </div>
        <div class="btncommentary" id="btnCommentary">解説を見る</div>
     </div>
 
     <div id="sceneCommentary" class="commentary screen">
-    <div class="explain-title">解説</div>
+  
+    <p class="mistaken-question">間違えた問題</p>
+    <ul id="textQuestion2"></ul> 
 
-    <p>(1)</p><p class= "explaination1", id="explainedQuestion0"></p>
-    <p class= "explaination2", id="explainedQuestion01"></p>
+    <p class="explain-title">解説</p>
+    <ul id="explainedQuestion"></ul>
 
-    <p>(2)</p><p class= "explaination1", id="explainedQuestion1"></p>
-    <p class= "explaination2", id="explainedQuestion02"></p>
-
-    <p>(3)</p><p class= "explaination1", id="explainedQuestion2"></p>
-    <p class= "explaination2", id="explainedQuestion03"></p>
-
-    <p>(4)</p><p class= "explaination1", id="explainedQuestion3"></p>
-    <p class= "explaination2", id="explainedQuestion04"></p>
-
-    <p>(5)</p><p class= "explaination1", id="explainedQuestion4"></p>
-    <p class= "explaination2", id="explainedQuestion05"></p>
-
-    <p>(6)</p><p class= "explaination1", id="explainedQuestion5"></p>
-    <p class= "explaination2", id="explainedQuestion06"></p>
-
-    <p>(7)</p><p class= "explaination1", id="explainedQuestion6"></p>
-    <p class= "explaination2", id="explainedQuestion07"></p>
-
-    <p>(8)</p><p class= "explaination1", id="explainedQuestion7"></p>
-    <p class= "explaination2", id="explainedQuestion08"></p>
-
-    <p>(9)</p><p class= "explaination1", id="explainedQuestion8"></p>
-    <p class= "explaination2", id="explainedQuestion09"></p>
-
-    <p>(10)</p><p class= "explaination1", id="explainedQuestion9"></p>
-    <p class= "explaination3", id="explainedQuestion10"></p>
-
-       <p class="reset" id="btnReset">もう一度</p>
+       <!--<p class="reset" id="btnReset">もう一度</p>-->
        <%= form_with model: @score, class: 'new-score-form', local: true do |form| %>
        <%= form.number_field :score, value: "", url: scores_path, id: "score", class:"score"%>
-       <%= form.submit "ランキングに反映する" , id: "score-submit" ,class:"ranking" %>
+       <%= form.submit "トップページに戻る" , id: "score-submit" ,class:"ranking" %>
        <% end %>
        
     </div>
