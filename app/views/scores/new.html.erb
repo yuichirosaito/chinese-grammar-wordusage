@@ -49,10 +49,10 @@
     <p>(10)</p><p class= "explaination1", id="explainedQuestion9"></p>
     <p class= "explaination3", id="explainedQuestion10"></p>
 
+       <p class="reset" id="btnReset">もう一度</p>
        <%= form_with model: @score, class: 'new-score-form', local: true do |form| %>
        <%= form.number_field :score, value: "", url: scores_path, id: "score", class:"score"%>
        <%= form.submit "ランキングに反映する" , id: "score-submit" ,class:"ranking" %>
-       <div class="reset" id="btnReset">もう一度</div>
        <% end %>
        
     </div>

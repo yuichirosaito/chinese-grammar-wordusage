@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
 
-    validates :content, presence: true
-    
+    validates :content, presence: true, length: { maximum: 60}
+
     def self.search(search)
         if search != ""
           Post.where('content LIKE(?)', "%#{search}%")
