@@ -110,7 +110,6 @@
     padding: 20px;
   }
 
- /* スマホ表示時 */
  @media (max-width: 599px) {
 
   .registration-main {
