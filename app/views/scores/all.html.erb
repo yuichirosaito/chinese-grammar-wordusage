@@ -2,10 +2,10 @@
  <div class="ranking-wrap">
 <div class="ranking-title">ランキング</div>
 
-<% @scores.each.with_index(1) do |score, i| %>
+<div class="allranking"><span class= "allranking-title">総合ランキング</span>
+<% @allscores.each.with_index(1) do |score, i| %>
 
 <% arrays = [] %> 
-
 <% Score.count.times do |i|%>
 <% i += 1 %>
 <% array = {} %>
@@ -16,7 +16,6 @@
 <% array = column.score %>
 <% arrays << array %>
 <% end %>
-
 <% avg = arrays.sum/arrays.length %>
 <% array2 = arrays.each do |x| %>
 <% (x - avg) ** 2 %>
@@ -24,11 +23,47 @@
 <% std = Math.sqrt(array2.sum / arrays.length).round(1) %>
 <% dev = ((score.score - avg) * 10 / std + 50).round(1) %>
 
-<div><span class="show-ranking">第<%= i %>位  <%= score.user.nickname %><br><%= score.score %>点  偏差値: <%= dev %></span></div>
+<div>
+<%if i<4 || score.user.nickname == current_user.nickname%>
+<span class="show-allranking"><span class="score-color">第<%= i %>位  <%= score.user.nickname %><br><%= score.score %>点  偏差値: <%= dev %></span></span></div>
+<% else %>
+<span class="show-allranking">第<%= i %>位  <%= score.user.nickname %><br><%= score.score %>点  偏差値: <%= dev %></span></div>
+
 <% end %>
+<% end %>
+</div>
+
+<div class="weeklyranking"><span class= "weeklyranking-title">週間ランキング</span>
+<% @weeklyscores.each.with_index(1) do |score, i| %>
 
 <% arrays = [] %> 
+<% Score.count.times do |i|%>
+<% i += 1 %>
+<% array = {} %>
+<% while Score.find_by(id: i) == nil %>
+<% i += 1 %>
+<% end %>
+<% column = Score.find(i) %>
+<% array = column.score %>
+<% arrays << array %>
+<% end %>
+<% avg = arrays.sum/arrays.length %>
+<% array2 = arrays.each do |x| %>
+<% (x - avg) ** 2 %>
+<% end %>
+<% std = Math.sqrt(array2.sum / arrays.length).round(1) %>
+<% dev = ((score.score - avg) * 10 / std + 50).round(1) %>
 
+<div>
+<%if i<4 || score.user.nickname == current_user.nickname%>
+<span class="show-weeklyranking"><span class="score-color">第<%= i %>位  <%= score.user.nickname %><br><%= score.score %>点  偏差値: <%= dev %></span></span></div>
+<% else %>
+<span class="show-weeklyranking">第<%= i %>位  <%= score.user.nickname %><br><%= score.score %>点  偏差値: <%= dev %></span></div>
+<% end %>
+<% end %>
+</div>
+
+<% arrays = [] %> 
 <% Score.count.times do |i|%>
 <% i += 1 %>
 <% array = {} %>

@@ -1,11 +1,29 @@
 <div class="ranking-page">
 <div class="ranking-wrap">
 
- <h1 class="ranking-title"><%= current_user.nickname%>さんのランキング</h1>
+ <h1 class="ranking-title"><%= current_user.nickname%>さんの<br>ランキング</h1>
 
-<% @scores.each.with_index(1) do |score, i| %>
-
-<div><span class="show-ranking">第<%= i %>位  <%= score.score %>点  <br><%= l score.created_at, format: :short%></span></div>
+<div class="allranking"><span class= "allranking-title">総合ランキング</span>
+<% @allscores.each.with_index(1) do |score, i| %>
+<div><span class="show-allranking">
+<%if i<4 %>
+<span class="score-color">第<%= i %>位  <%= score.score %> 点</span>  <br><%= l score.created_at, format: :short%></span></div>
+<%else%>
+第<%= i %>位  <%= score.score %> 点  <br><%= l score.created_at, format: :short%></span></div>
 <% end %>
+<% end %>
+</div>
+
+<div class="weeklyranking"><span class= "weeklyranking-title">週間ランキング</span>
+<% @weeklyscores.each.with_index(1) do |score, i| %>
+<div><span class="show-weeklyranking">
+<%if i<4 %>
+<span class="score-color">第<%= i %>位  <%= score.score %> 点</span>  <br><%= l score.created_at, format: :short%></span></div>
+<%else%>
+第<%= i %>位  <%= score.score %> 点  <br><%= l score.created_at, format: :short%></span></div>
+<% end %>
+<% end %>
+</div>
+
 </div>
 </div>

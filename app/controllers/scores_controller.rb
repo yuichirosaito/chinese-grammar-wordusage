@@ -12,12 +12,24 @@ class ScoresController < ApplicationController
   end
 
   def all
-    @scores = Score.all.order(score: 'DESC').limit(30)
+    @allscores = Score.all.order(score: 'DESC').limit(30)
+
+    today = Date.today
+    newtoday = today.strftime("%Y-%m-%d")
+
+    @weeklyscores = Score.where(created_at: newtoday.in_time_zone.all_week).order(score: 'DESC').limit(30)
   end
 
   def myscore
-    @scores = current_user.scores.order(score: 'DESC').limit(30)
+    @allscores = current_user.scores.order(score: 'DESC').limit(30)
+
+    today = Date.today
+    newtoday = today.strftime("%Y-%m-%d")
+
+    @weeklyscores = Score.where(created_at: newtoday.in_time_zone.all_week).where(user_id: current_user).order(score: 'DESC').limit(30)
   end
+
+
 
   private
 
