@@ -81,7 +81,6 @@
   .register-red-btn:hover  {
     background: linear-gradient(#c1faa4, #58ee6c);
     color: black;
-    padding: 20px;
   }
 
   .login-btn {
@@ -107,7 +106,6 @@
   .new-register:hover  {
     background: linear-gradient(#c1faa4, #58ee6c);
     color: black;
-    padding: 20px;
   }
 
  @media (max-width: 599px) {
@@ -153,7 +151,6 @@
   .register-red-btn:hover  {
     background: linear-gradient(#c1faa4, #58ee6c);
     color: black;
-    padding: 20px;
   }
 
   .login-btn {

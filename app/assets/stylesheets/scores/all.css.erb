@@ -110,11 +110,19 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
+  padding-bottom: calc(100%*2100/2100);
+    background-size: 100% auto;
    }
+
+   .ranking-wrap {
+    display: block;
+    justify-content: space-between;
+  }
+
 
    .ranking-title {
   border-radius: 50px;
-  padding: 20px;
+  padding: 10px;
   width: 160px;
   color: rgb(4, 241, 123);
   font-size: 20px;
@@ -127,7 +135,7 @@
 
   .show-ranking{
   border-radius: 50px;
-  width: 300px;
+  width: 10px;
   height: 35px;
   color: black;
   font-size: 15px;
@@ -138,9 +146,36 @@
   transition: all 0.3s ease 0s;
   display: block;
   margin-top: 20px;
-  padding: 20px;
+  padding: 10px;
   padding-top: 5px;
   text-align: center;
+  }
+
+  .show-allranking{
+  border-radius: 50px;
+  width: 350px;
+  height: 50px;
+  color: black;
+  font-size: 15px;
+  background: linear-gradient(#dcf4f5, #b2a9f8);
+  opacity: 0.85;
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+  }
+
+  .show-weeklyranking{
+  border-radius: 50px;
+  width: 350px;
+  height: 50px;
+  color: black;
+  font-size: 15px;
+  background: linear-gradient(#dcf4f5, #b2a9f8);
+  opacity: 0.85;
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-right: 200px;
   }
 
   .show-ranking:hover {
@@ -162,6 +197,7 @@
   margin-left: 100px;
   margin-top: 40px;
   }
+
 
 
  }
