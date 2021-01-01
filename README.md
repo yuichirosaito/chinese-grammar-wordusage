@@ -18,19 +18,24 @@ https://chinese-grammer-wordusage.herokuapp.com
 
 # GIFと説明: 
 ## トップページ
-パパラックスを活用しシンプルさと全体の見やすさを意識した。　GIF: https://gyazo.com/ef4f28f6cff5e5dde53cec78282c4773
+パパラックスを活用しシンプルさと全体の見やすさを意識した。　
+GIF: https://gyazo.com/ef4f28f6cff5e5dde53cec78282c4773
 
 ## 質問・得点機能
-非同期通信で問題の表示・回答の流れをスムーズに行えるよう実装した。　GIF: https://gyazo.com/9a69fae4863a741a9c753da2fb91feb5
+非同期通信で問題の表示・回答の流れをスムーズに行えるよう実装した。　
+GIF: https://gyazo.com/9a69fae4863a741a9c753da2fb91feb5
 
 ## ランキング機能
-他のユーザーを含めた全体のランキングと個人のランキングを用意し、全体におけるユーザーの位置や成長を数値で把握できるような実装を行なった。　GIF: https://gyazo.com/abba52cf4c48b0ed5a8a822d3b620a40
+他のユーザーを含めた全体のランキングと個人のランキングを用意し、全体におけるユーザーの位置や成長を数値で把握できるような実装を行なった。　
+GIF: https://gyazo.com/abba52cf4c48b0ed5a8a822d3b620a40
 
 ## 非同期での匿名チャット機能
-ニックネームなどよりも更に質問がしやすくなるよう完全匿名でのチャット機能を実装した。　GIF: https://gyazo.com/296dbce4bd05829214d802a97ab77ed3
+ニックネームなどよりも更に質問がしやすくなるよう完全匿名でのチャット機能を実装した。　
+GIF: https://gyazo.com/296dbce4bd05829214d802a97ab77ed3
 
 ## ユーザー登録・ログイン画面
-入力情報を最小限に止めることでユーザー登録やログインの際に煩わしさを感じさせないよう実装した。　GIF: https://gyazo.com/8d1a568b943ffe421da2ad2606f45331
+入力情報を最小限に止めることでユーザー登録やログインの際に煩わしさを感じさせないよう実装した。　
+GIF: https://gyazo.com/8d1a568b943ffe421da2ad2606f45331
 
 # ER図
 https://drive.google.com/file/d/1ajsrR-1LmyJcqn4ISB78bUP3fnCDW5rQ/view?usp=sharing
