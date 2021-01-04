@@ -30,15 +30,17 @@ https://chinese-grammer-wordusage.herokuapp.com
 
 ## ランキング機能
 他のユーザーを含めた全体のランキングと個人のランキングを用意し、全体におけるユーザーの位置や成長を数値で把握できるような実装を行なった。　
-GIF: https://gyazo.com/abba52cf4c48b0ed5a8a822d3b620a40
+![スクリーンショット 2021-01-04 17 30 41](https://user-images.githubusercontent.com/74515647/103515779-af78b200-4eb2-11eb-8b54-820243f5f0f5.png)
+![スクリーンショット 2021-01-04 17 30 54](https://user-images.githubusercontent.com/74515647/103515781-b0a9df00-4eb2-11eb-8ab7-ced9035356f1.png)
 
 ## 非同期での匿名チャット機能
 ニックネームなどよりも更に質問がしやすくなるよう完全匿名でのチャット機能を実装した。　
-GIF: https://gyazo.com/296dbce4bd05829214d802a97ab77ed3
+![スクリーンショット 2021-01-04 17 31 12](https://user-images.githubusercontent.com/74515647/103515783-b1db0c00-4eb2-11eb-88b2-445760134976.png)
+
 
 ## ユーザー登録・ログイン画面
 入力情報を最小限に止めることでユーザー登録やログインの際に煩わしさを感じさせないよう実装した。　
-GIF: https://gyazo.com/8d1a568b943ffe421da2ad2606f45331
+![スクリーンショット 2021-01-04 17 32 29](https://user-images.githubusercontent.com/74515647/103515888-e353d780-4eb2-11eb-8046-8a8979350b6d.png)
 
 # ER図
 https://drive.google.com/file/d/1ajsrR-1LmyJcqn4ISB78bUP3fnCDW5rQ/view?usp=sharing
@@ -74,6 +76,28 @@ https://drive.google.com/file/d/1ajsrR-1LmyJcqn4ISB78bUP3fnCDW5rQ/view?usp=shari
 | Column         | Type    | Options     |
 | --------       | ------  | ----------- |
 | post           | text    | null: false |
+
+## sentences テーブル
+
+| Column         | Type    | Options     |
+| --------       | ------  | ----------- |
+| sentence       | text    | null: false |
+| explaination   | text    | null: false |
+| tag            |reference| null: false, foreign_key: true|
+
+### Association
+
+- belong_to :tag
+
+## tags テーブル
+
+| Column         | Type    | Options     |
+| --------       | ------  | ----------- |
+| tag            | text    | null: false |
+
+### Association
+
+- has_many :sentences
 
 
 
