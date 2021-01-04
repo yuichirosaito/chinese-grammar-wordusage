@@ -16,14 +16,17 @@
 # URL
 https://chinese-grammer-wordusage.herokuapp.com
 
-# GIFと説明: 
+# 各機能説明と画面キャプチャ: 
 
-## トップページ: パパラックスを活用しシンプルさと全体の見やすさを意識した。　
+## トップページ: 
+パパラックスを活用しシンプルさと全体の見やすさを意識した。　
 画面キャプチャ:  ![スクリーンショット 2021-01-04 13 52 10](https://user-images.githubusercontent.com/74515647/103502295-23579200-4e94-11eb-81ab-7e4c5601c902.png)
 
 ## 質問・得点機能
 非同期通信で問題の表示・回答の流れをスムーズに行えるよう実装した。　
-GIF: https://gyazo.com/9a69fae4863a741a9c753da2fb91feb5
+![スクリーンショット 2021-01-04 17 11 48](https://user-images.githubusercontent.com/74515647/103515595-5c9efa80-4eb2-11eb-9b47-7b3bf0b0e624.png)
+![スクリーンショット 2021-01-04 17 11 15](https://user-images.githubusercontent.com/74515647/103515611-645e9f00-4eb2-11eb-9e92-44373cb8b56d.png)
+![スクリーンショット 2021-01-04 17 12 00](https://user-images.githubusercontent.com/74515647/103515616-66286280-4eb2-11eb-8dda-8d207f0fcc32.png)
 
 ## ランキング機能
 他のユーザーを含めた全体のランキングと個人のランキングを用意し、全体におけるユーザーの位置や成長を数値で把握できるような実装を行なった。　
