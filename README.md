@@ -17,7 +17,8 @@
 https://chinese-grammer-wordusage.herokuapp.com
 
 # GIFと説明: 
-## トップページ: パパラックスを活用しシンプルさと全体の見やすさを意識した。　画面キャプチャ:  https://user-images.githubusercontent.com/74515647/103502145-a9bfa400-4e93-11eb-97ae-66408629b70c.png, https://user-images.githubusercontent.com/74515647/103502295-23579200-4e94-11eb-81ab-7e4c5601c902.png
+## トップページ: パパラックスを活用しシンプルさと全体の見やすさを意識した。　
+画面キャプチャ:  https://user-images.githubusercontent.com/74515647/103502145-a9bfa400-4e93-11eb-97ae-66408629b70c.png, https://user-images.githubusercontent.com/74515647/103502295-23579200-4e94-11eb-81ab-7e4c5601c902.png
 
 ## 質問・得点機能
 非同期通信で問題の表示・回答の流れをスムーズに行えるよう実装した。　
