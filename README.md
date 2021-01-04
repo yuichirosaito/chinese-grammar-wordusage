@@ -19,7 +19,7 @@ https://chinese-grammer-wordusage.herokuapp.com
 # GIFと説明: 
 ## トップページ
 パパラックスを活用しシンプルさと全体の見やすさを意識した。　
-GIF: https://gyazo.com/ef4f28f6cff5e5dde53cec78282c4773
+![Uploading スクリーンショット 2021-01-04 13.43.00.png…]()
 
 ## 質問・得点機能
 非同期通信で問題の表示・回答の流れをスムーズに行えるよう実装した。　
