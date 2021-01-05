@@ -108,6 +108,26 @@
     color: black;
   }
 
+  .purchase-btn {
+    width: 120px;
+    background:white;
+    text-align: center;
+    border-radius: 4%;
+    top: 0px;
+    left: 380px;
+    position: fixed;
+    padding: 18px;
+  }
+  
+  .purchase-btn-text {
+    color:black;
+    display: block;
+    font-size: 15px;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  
+
  @media (max-width: 599px) {
 
   .registration-main {
