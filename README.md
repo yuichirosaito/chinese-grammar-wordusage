@@ -89,17 +89,3 @@ Javascriptを活用し問題の表示・回答の流れをスムーズに行え�
 | sentence       | text    | null: false |
 | explaination   | text    | null: false |
 | tag            |reference| null: false, foreign_key: true|
-
-### Association
-
-- belong_to :tag
-
-## tags テーブル
-
-| Column         | Type    | Options     |
-| --------       | ------  | ----------- |
-| tag            | text    | null: false |
-
-### Association
-
-- has_many :sentences
