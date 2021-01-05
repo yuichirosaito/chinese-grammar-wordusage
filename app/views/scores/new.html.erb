@@ -17,14 +17,18 @@
     </div>
 
     <div id="sceneCommentary" class="commentary screen">
-  
-     <div class="mistaken-question">間違えた問題</div>
-     <ul id="textQuestion2"></ul> 
 
-     <div class="explain-title">解説</div>
-     <ul id="explainedQuestion"></ul>
+   <div class="last_page">
+    <div class="mistake"> 
+      <div class="mistaken-question">間違えた問題</div>
+      <ul id="textQuestion2"></ul> 
+    </div> 
 
-       <!--<p class="reset" id="btnReset">もう一度</p>-->
+     <div class="explain_to">  
+       <div class="explain-title">解説</div>
+       <ul id="explainedQuestion"></ul>
+     </div> 
+    </div> 
        <%= form_with model: @score, class: 'new-score-form', local: true do |form| %>
        <%= form.number_field :score, value: "", url: scores_path, id: "score", class:"score"%>
        <%= form.submit "トップページに戻る" , id: "score-submit" ,class:"ranking" %>

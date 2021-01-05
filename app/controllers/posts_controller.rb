@@ -1,11 +1,15 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all.order(id: 'DESC').limit(30)
+    @posts = Post.all.order(id: "ASC").limit(100)
+    @post = Post.new
   end
 
   def create
-    post = Post.create(content: params[:content])
-    render json: { post: post }
+    @post = Post.new(content: params[:post][:content])
+    if @post.save
+      
+      ActionCable.server.broadcast 'post_channel', contents: @post
+    end
   end
 
   def search

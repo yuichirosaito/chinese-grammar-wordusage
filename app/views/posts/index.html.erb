@@ -1,27 +1,26 @@
 <div class="communication">
-  <%= form_with url: "/posts", method: :post,id: "form" do |form| %>
-  <%= form.text_field :content, class: "box"%>
-  <%= form.submit '投稿する' , id: "submit" %>
-    <% end %>
+  <%= form_with model: @post do |f| %>
+  <%= f.text_field :content, class: "box"%>
+  <%= f.submit '投稿する' , id: "submit", class: "submit"%>
+<% end %>
 
-   <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
-     <%= form.text_field :keyword, class: "search-input" %>
-     <%= form.submit "キーワードで検索する", class: "search-btn" %>
-   <% end %>
-
-   <div id="list">
+   <div id="posts">
    </div>
 
-   <% @posts.each do |post| %>
-  <div class="post" data-id = <%= post.id %>>
+<div id='posts'>
+  <% @posts.reverse_each do |post| %>
+  <div class="post">
     <div class="post-date">
-      投稿日時：<%= l post.created_at, format: :short %>
+      投稿日時：<%= l post.created_at %>
     </div>
     <div class="post-content">
-      <%= post.content %>
+      <p><%= post.content %></p>
     </div>
-  </div>
-<% end %>
+  </div>  
+  <% end %>
 </div>
+</div>
+
+
 
 
