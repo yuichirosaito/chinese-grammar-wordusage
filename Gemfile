@@ -67,3 +67,7 @@ gem 'factory_bot_rails'
 gem 'faker'
 
 gem 'ransack'
+
+gem 'omniauth-facebook'
+
+gem "omniauth-rails_csrf_protection"

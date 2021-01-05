@@ -6,6 +6,11 @@
       中国語文法・語法<br>ログイン
     </h1>
   </div>
+
+<%= link_to(user_facebook_omniauth_authorize_path, method: :post, class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>Facebookで登録</span>
+  <%= image_tag 'facebook.png' , size: '50x50' ,class: "purchase-btn-icon" %>
+  <% end %>
   
   <div class="form-group">
     <div class='form-text-wrap'>
