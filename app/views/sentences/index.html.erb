@@ -1,0 +1,10 @@
+<div class="items-sell-contents">
+  <div class="items-sell-main">
+    <%= search_form_for @p, url: search_sentences_path do |f| %>
+        <%= f.label :tag_eq, '確認したい文法を選ぶ', class:"search"%>
+        <%= f.collection_select :tag_eq, @sentence_name, :tag, :tag,  include_blank: '指定なし', class:"select-box"%>
+        <%= f.submit '検索', class:"register-red-btn"%>
+    <% end %>
+    <p class="return_toppage"><%= link_to 'トップページへ戻る', root_path %></p>
+  </div>
+</div>

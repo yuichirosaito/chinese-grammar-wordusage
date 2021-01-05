@@ -19,7 +19,7 @@ https://chinese-grammer-wordusage.herokuapp.com
 # GIFと説明: 
 
 ## トップページ: パパラックスを活用しシンプルさと全体の見やすさを意識した。　
-画面キャプチャ:  images/design2.png
+画面キャプチャ:  (app/images/design2.png)
 
 ## 質問・得点機能
 非同期通信で問題の表示・回答の流れをスムーズに行えるよう実装した。　
@@ -71,6 +71,20 @@ https://drive.google.com/file/d/1ajsrR-1LmyJcqn4ISB78bUP3fnCDW5rQ/view?usp=shari
 | Column         | Type    | Options     |
 | --------       | ------  | ----------- |
 | post           | text    | null: false |
+
+## sentences テーブル
+
+| Column         | Type    | Options     |
+| --------       | ------  | ----------- |
+| sentence       | text    | null: false |
+| explaination   | text    | null: false |
+| tag            |reference| null: false, foreign_key: true|
+
+## tags テーブル
+
+| Column         | Type    | Options     |
+| --------       | ------  | ----------- |
+| tag            | text    | null: false |
 
 
 

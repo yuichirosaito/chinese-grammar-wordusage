@@ -243,7 +243,7 @@ window.addEventListener('load', function(){
       text: "今年的樱花开得早，四月中旬（？）开了。",
       choice: ["再","还是","刚才","就",
       ],
-      answer: "即使...也...",
+      answer: "就",
       explain: "文意から「早くも」を意味する「就」が適当"
     },
     {
