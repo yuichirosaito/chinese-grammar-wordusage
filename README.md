@@ -20,13 +20,14 @@ https://chinese-grammer-wordusage.herokuapp.com
 
 ## トップページ: 
 パパラックスを活用しシンプルさと全体の見やすさを意識した。　
-![スクリーンショット 2021-01-04 13 52 10](https://user-images.githubusercontent.com/74515647/103502295-23579200-4e94-11eb-81ab-7e4c5601c902.png)
+![スクリーンショット 2021-01-04 13 52 10](https://user-![スクリーンショット 2021-01-04 13 52 10](https://user-images.githubusercontent.com/74515647/103614542-2b830080-4f6c-11eb-91b2-1e7fd401caf0.png)
 
 ## 質問・得点機能
 Javascriptを活用し問題の表示・回答の流れをスムーズに行えるよう実装した。　
 ![スクリーンショット 2021-01-04 17 11 48](https://user-images.githubusercontent.com/74515647/103515595-5c9efa80-4eb2-11eb-9b47-7b3bf0b0e624.png)
 ![スクリーンショット 2021-01-04 17 11 15](https://user-images.githubusercontent.com/74515647/103515611-645e9f00-4eb2-11eb-9e92-44373cb8b56d.png)
-![スクリーンショット 2021-01-04 17 12 00](https://user-images.githubusercontent.com/74515647/103515616-66286280-4eb2-11eb-8dda-8d207f0fcc32.png)
+![スクリーンショット 2021-01-05 15 38 48](https://user-images.githubusercontent.com/74515647/103614535-2756e300-4f6c-11eb-814a-4f6d2ed6535c.png)
+![スクリーンショット 2021-01-05 15 38 54](https://user-images.githubusercontent.com/74515647/103614538-2920a680-4f6c-11eb-88c4-c712e89e8571.png)
 
 ## ランキング機能
 他のユーザーを含めた全体のランキングと個人のランキングを用意し、全体におけるユーザーの位置や成長を数値で把握できるような実装を行なった。　
