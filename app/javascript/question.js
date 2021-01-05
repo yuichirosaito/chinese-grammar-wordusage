@@ -34,7 +34,7 @@ window.addEventListener('load', function(){
       text: "我是在研究所学（？）汉语。",
       choice: ["了","着","的","过",
       ],
-      answer: "的",
+      answer: "过",
       explain: "一定の期間を過ごした経験を表す場合は、助詞「过」を用いる"
     },
     {
@@ -420,7 +420,7 @@ window.addEventListener('load', function(){
     },
     {
       text: "小白（点子→？）最多，你去找他吧。",
-      choice: ["部下","存款	","主意	","房产",
+      choice: ["部下","存款	","主意","房产",
       ],
       answer: "主意",
       explain: "「点子」が「考え、アイデア」を意味しており「主意」が適当"
@@ -434,9 +434,9 @@ window.addEventListener('load', function(){
     },
     {
       text: "别跟那些（不三不四→？）的人来往。",
-      choice: ["不正派","不认真	","没礼貌	","没水平",
+      choice: ["不正派","不认真","没礼貌	","没水平",
       ],
-      answer: "花钱没有节制",
+      answer: "不正派",
       explain: "「不三不四」が「まともでない」を意味しており「不正派」が適当"
     },
   ];
