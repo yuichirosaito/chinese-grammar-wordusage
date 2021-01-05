@@ -20,8 +20,7 @@ https://chinese-grammer-wordusage.herokuapp.com
 
 ## トップページ: 
 パパラックスを活用しシンプルさと全体の見やすさを意識した。　
-![スクリーンショット 2021-01-04 13 52 10](https://user-images.githubusercontent.com/74515647/103614542-2b830080-4f6c-11eb-91b2-1e7fd401caf0.png)
-
+![スクリーンショット 2021-01-05 15 38 34](https://user-images.githubusercontent.com/74515647/103614674-89afe380-4f6c-11eb-977b-8df183543d4f.png)
 
 ## 質問・得点機能
 Javascriptを活用し問題の表示・回答の流れをスムーズに行えるよう実装した。　
