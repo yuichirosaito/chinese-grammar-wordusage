@@ -41,7 +41,7 @@ window.addEventListener('load', function(){
       text: "明天我（？）他打电话。",
       choice: ["向","往","对","给",
       ],
-      answer: "把",
+      answer: "给",
       explain: "「往」は方向、「对」陳述の対象、“给”は受手をそれぞれ示す"
       
     },
