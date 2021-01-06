@@ -1,5 +1,10 @@
 <%= form_with model: @user, url: user_session_path, class: 'registration-main', method: :post, local: true do |f| %>
 
+<%= link_to(user_twitter_omniauth_authorize_path, method: :post, class: 'purchase-btn2') do %>
+  <span class='purchase-btn-text2'>Twitterで登録</span>
+  <%= image_tag 'twitter.png' , size: '50x50' ,class: "purchase-btn-icon2" %>
+  <% end %>
+
 <div class='form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
@@ -9,7 +14,7 @@
 
 <%= link_to(user_facebook_omniauth_authorize_path, method: :post, class: 'purchase-btn') do %>
   <span class='purchase-btn-text'>Facebookで登録</span>
-  <%= image_tag 'facebook.png' , size: '50x50' ,class: "purchase-btn-icon" %>
+  <%= image_tag 'facebook.png' , size: '45x45' ,class: "purchase-btn-icon" %>
   <% end %>
   
   <div class="form-group">
