@@ -126,6 +126,25 @@
     text-decoration: none;
     margin-bottom: 5px;
   }
+
+  .purchase-btn2 {
+    width: 120px;
+    background:white;
+    text-align: center;
+    border-radius: 4%;
+    top: 0px;
+    right: 380px;
+    position: fixed;
+    padding: 18px;
+  }
+  
+  .purchase-btn-text2 {
+    color:black;
+    display: block;
+    font-size: 15px;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
   
 
  @media (max-width: 599px) {
