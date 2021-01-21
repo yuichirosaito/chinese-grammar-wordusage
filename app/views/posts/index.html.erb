@@ -9,14 +9,10 @@
 
 <div id='posts'>
   <% @posts.reverse_each do |post| %>
-  <div class="post">
-    <div class="post-date">
-      投稿日時：<%= l post.created_at %>
-    </div>
-    <div class="post-content">
-      <p><%= post.content %></p>
-    </div>
-  </div>  
+  <div id="post_<%= post.id %>">
+  <%= render 'post', post: post %>
+</div>
+
   <% end %>
 </div>
 </div>

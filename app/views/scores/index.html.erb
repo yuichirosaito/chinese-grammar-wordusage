@@ -1,19 +1,17 @@
 <main>
   <div class="fixed-bg bg-1">
-    <h1 class="main-text0">中級者(中国語検定2級程度)対象</h1>
-    <h2 class="main-text1">中国語文法・語法</h2>
+    <h1 class="main-text0">中級レベル対象</h1>
+    <h2 class="main-text1">中国語文法・語法問題</h2>
     <h3 class="main-text2">下へスクロールしてください</h3>
   </div>
 
   <div class="fixed-bg bg-3">
-  <div class="function-link">  
-  <%= link_to '問題を解いてみる', new_score_path, method: :get, class: "favorite-btn1" %>
-  <%= link_to '全体のランキングを見る', all_scores_path, method: :get, class: "favorite-btn3" %>
-  <%= link_to '自分のランキングを見る', myscore_scores_path, method: :get, class: "favorite-btn3" %>
-  <%= link_to 'カテゴリーごとに文法を見る',  sentences_path, method: :get, class: "favorite-btn3" %>
-  <%= link_to '他の学習者と交流する', posts_path, method: :get, class: "favorite-btn2" %>
-
+  <div class="icon">  
+  <%= link_to '問題に挑戦', new_score_path, method: :get, class: "favorite-btn1 fa fa-check-square"%>
+  <%= link_to '全体ランキング', all_scores_path, method: :get, class: "favorite-btn3 fa fa-crown" %>
+  <%= link_to 'Myランキング', myscore_scores_path, method: :get, class: "favorite-btn3 fa fa-crown" %>
+  <%= link_to '文法・語法チェック',  sentences_path, method: :get, class: "favorite-btn3 fa fa-cogs" %>
+  <%= link_to 'チャットルーム', posts_path, method: :get, class: "favorite-btn2 fa fa-users" %>
   </div>
-  
   </div>
 </main>

@@ -17,7 +17,7 @@ consumer.subscriptions.create("PostChannel", {
     </div>
     <div class="post-content">
     ${data.contents.content}
-    </div>
+    </div>    
     </div>`;
     const messages = document.getElementById('posts');
     const newMessage = document.getElementById('post_content');

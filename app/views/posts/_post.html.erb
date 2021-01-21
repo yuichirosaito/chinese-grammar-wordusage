@@ -1,0 +1,16 @@
+<div class="post">
+    <div class="post-date">
+      投稿日時：<%= l post.created_at %>
+    </div>
+    <div class="post-content">
+      <p><%= post.content %></p>
+    </div>
+
+    <%= link_to create_like_path(post), class: "like-link", method: :POST, remote: true do %>
+      <i class="fas fa-thumbs-up like-btn"></i>
+    <% end %>
+    <%= post.likes.count %>
+    <div class="mask">
+	  <div class="caption">いいねボタン→→→→</div>
+	</div>
+</div>  

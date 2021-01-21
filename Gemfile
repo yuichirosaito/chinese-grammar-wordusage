@@ -77,3 +77,5 @@ gem 'dotenv-rails'
 gem 'omniauth-twitter'   
 
 gem 'omniauth'
+
+gem 'font-awesome-sass'
