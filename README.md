@@ -50,7 +50,8 @@ Javascriptを活用し問題の表示・回答の流れをスムーズに行え�
 ![スクリーンショット 2021-01-05 15 31 20](https://user-images.githubusercontent.com/74515647/103614259-836d3780-4f6b-11eb-9e28-1f559dd04a94.png)
 
 # ER図
-![スクリーンショット 2021-01-04 17 45 27](https://user-images.githubusercontent.com/74515647/103516984-be606400-4eb4-11eb-86cb-6123f7ecccb1.png)
+![スクリーンショット 2021-01-22 0 13 43](https://user-images.githubusercontent.com/74515647/105370865-5f864300-5c47-11eb-881b-9a177d3041d6.png)
+
 
 
 # table
@@ -84,6 +85,21 @@ Javascriptを活用し問題の表示・回答の流れをスムーズに行え�
 | Column         | Type    | Options     |
 | --------       | ------  | ----------- |
 | post           | text    | null: false |
+
+### Association
+
+- has_many :likes
+
+## likes テーブル
+
+| Column          | Type    | Options     |
+| --------        | ------  | ----------- |
+| post            |reference| null: false, foreign_key: true|
+
+
+### Association
+
+- belongs_to :post
 
 ## sentences テーブル
 
