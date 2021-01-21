@@ -51,7 +51,6 @@
 
   .like-link {
     text-decoration: none;
-
   }
   
   .like-btn {
@@ -76,7 +75,7 @@
   .mask {
     height: 100px;
     width: 200px;
-    opacity:		0;	/* 表示させない */
+    opacity:		0;
     -webkit-transition:	all 1.6s ease;
     transition:		all 1.6s ease;
   }
@@ -125,5 +124,6 @@
     border-radius: 20px;
     margin-left: 40px;
   }
+}  
 
 

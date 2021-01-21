@@ -1,12 +1,11 @@
 *{
   margin: 0px;
   padding: 0px;
-  }
+}
 
 body,html,main
 {
   height: 100%;
-  
 }
 
 .fixed-bg {
@@ -25,7 +24,6 @@ body,html,main
 .main-text0 {
   font-size: 50px;
   background: linear-gradient(#dcf4f5, #b2a9f8);
-  
   text-align: center;
   color: white;
   text-shadow: white;
@@ -36,7 +34,6 @@ body,html,main
 .main-text1 {
   font-size: 50px;
   background: linear-gradient(#dcf4f5, #b2a9f8);
-  
   text-align: center;
   color: grey;
   text-shadow: grey;
